@@ -8,3 +8,16 @@ updates:
     pull-request-branch-name:
       # Separate sections of the branch name with a hyphen
       separator: "-"
+
+  # Maintain dependencies for Dockerfile
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+    pull-request-branch-name:
+      # Separate sections of the branch name with a hyphen
+      separator: "-"
+    reviewers:
+      - "reezogit/back-admin"
